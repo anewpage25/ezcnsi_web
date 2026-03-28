@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const portfolios = [
-  { name: '한국정보통신진흥협회', category: 'Public Sector / Information System' },
-  { name: '국립장기조직혈액관리원', category: 'Public Sector / Information System' },
-  { name: '국제교류재단', category: 'Public Sector / Information System' },
-  { name: '한국가스공사', category: 'Public Sector / AI Service' },
+  { client: '국사편찬위원회', project: '한국사능력검정시험 운영시스템 및 기출문제시스템 위탁운영 용역 45회차' },
+  { client: '국립 장기조직혈액관리원', project: '국립 장기조직혈액관리원 정보시스템 운영 유지관리' },
+  { client: '한국국제교류재단', project: '한국국제교류재단 통합정보시스템 운영 및 유지보수' },
+  { client: '한국가스공사', project: '도시가스 수요관리 홈페이지 보안고도화, 기능개발 및 운영 용역' },
+  { client: '보건복지부 국립장기조직혈액관리원', project: '장기조직기능 전자동의시스템 구축' },
+  { client: '한국정보통신진흥협회', project: '이용자 역량강화 및 피해예방 온라인 교육시스템 구축' },
 ];
 
 export default function Portfolio() {
@@ -78,8 +80,8 @@ export default function Portfolio() {
               className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-white to-gray-100 border border-gray-200 rounded-3xl shadow-xl"
             >
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at center, var(--color-royal-blue) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-              <span className="relative z-10 text-royal-blue text-xs md:text-sm font-medium tracking-widest uppercase mb-6">{portfolios[current].category}</span>
-              <h3 className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight">{portfolios[current].name}</h3>
+              <h3 className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">{portfolios[current].client}</h3>
+              <p className="relative z-10 text-gray-600 text-base md:text-lg lg:text-xl font-medium break-keep max-w-4xl mx-auto">{portfolios[current].project}</p>
             </motion.div>
           </AnimatePresence>
 
