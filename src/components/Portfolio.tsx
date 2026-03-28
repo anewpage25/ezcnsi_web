@@ -49,9 +49,9 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="snap-section relative flex flex-col justify-center py-24 overflow-hidden bg-navy-900">
+    <section id="portfolio" className="snap-section relative flex flex-col justify-center py-24 overflow-hidden bg-gray-50">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-royal-blue/10 rounded-full blur-[100px] -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-royal-blue/5 rounded-full blur-[100px] -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <motion.div
@@ -61,8 +61,8 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-sm font-bold tracking-[0.2em] text-electric-blue uppercase mb-4">Portfolio</h2>
-          <p className="text-2xl font-light text-gray-300">주요 구축 사례</p>
+          <h2 className="text-sm font-bold tracking-[0.2em] text-royal-blue uppercase mb-4">Portfolio</h2>
+          <p className="text-2xl font-light text-gray-600">주요 구축 사례</p>
         </motion.div>
 
         <div className="relative h-[350px] md:h-[450px] flex items-center justify-center">
@@ -75,19 +75,19 @@ export default function Portfolio() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-navy-800 to-navy-900 border border-navy-700 rounded-3xl shadow-2xl"
+              className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-white to-gray-100 border border-gray-200 rounded-3xl shadow-xl"
             >
-              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at center, var(--color-electric-blue) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-              <span className="relative z-10 text-electric-blue text-xs md:text-sm font-medium tracking-widest uppercase mb-6">{portfolios[current].category}</span>
-              <h3 className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">{portfolios[current].name}</h3>
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at center, var(--color-royal-blue) 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+              <span className="relative z-10 text-royal-blue text-xs md:text-sm font-medium tracking-widest uppercase mb-6">{portfolios[current].category}</span>
+              <h3 className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight">{portfolios[current].name}</h3>
             </motion.div>
           </AnimatePresence>
 
           {/* Controls */}
-          <button onClick={prev} className="absolute left-2 md:-left-6 w-12 h-12 flex items-center justify-center bg-navy-800 border border-navy-600 rounded-full text-white hover:bg-electric-blue hover:text-navy-900 transition-colors z-20 shadow-lg">
+          <button onClick={prev} className="absolute left-2 md:-left-6 w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-full text-navy-900 hover:bg-royal-blue hover:text-white transition-colors z-20 shadow-md">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button onClick={next} className="absolute right-2 md:-right-6 w-12 h-12 flex items-center justify-center bg-navy-800 border border-navy-600 rounded-full text-white hover:bg-electric-blue hover:text-navy-900 transition-colors z-20 shadow-lg">
+          <button onClick={next} className="absolute right-2 md:-right-6 w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-full text-navy-900 hover:bg-royal-blue hover:text-white transition-colors z-20 shadow-md">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -100,7 +100,7 @@ export default function Portfolio() {
                 setDirection(idx > current ? 1 : -1);
                 setCurrent(idx);
               }}
-              className={`h-1.5 transition-all duration-500 rounded-full ${current === idx ? 'w-10 bg-electric-blue' : 'w-4 bg-navy-600 hover:bg-navy-500'}`}
+              className={`h-1.5 transition-all duration-500 rounded-full ${current === idx ? 'w-10 bg-royal-blue' : 'w-4 bg-gray-300 hover:bg-gray-400'}`}
             />
           ))}
         </div>

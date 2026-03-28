@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-navy-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="cursor-pointer flex items-center" onClick={() => scrollTo('hero')}>
-          <img src="/logo/ezcnsi_white_logo.png" alt="EZ CNSI" className="h-8 md:h-10 object-contain" />
+          <img src="https://cdn.imweb.me/upload/S202412123c3b63e7f7510/2c9cf723b705a.png" alt="EZ CNSI" className="h-8 md:h-10 object-contain" referrerPolicy="no-referrer" />
         </div>
         
         {/* Desktop Menu */}
