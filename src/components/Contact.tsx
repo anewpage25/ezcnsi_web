@@ -128,8 +128,22 @@ export default function Contact() {
         </div>
       </div>
 
-      <footer className="mt-16 border-t border-navy-800 pt-8 text-center text-gray-500 text-xs">
-        <p>&copy; {new Date().getFullYear()} EZ CNSI & EZ OREUM. All rights reserved.</p>
+      <footer className="w-full border-t border-navy-800 pt-8 pb-4 mt-16 text-gray-400 text-xs md:text-sm">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center md:items-start space-y-2 text-center md:text-left">
+          <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+            <span className="font-bold text-gray-300">(주) 이지씨엔에스아이</span>
+            <span className="hidden md:inline text-gray-600">|</span>
+            <span>대표 : 최영준</span>
+            <span className="hidden md:inline text-gray-600">|</span>
+            <span>사업자등록번호 : 113-86-90855</span>
+          </div>
+          <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+            <span>주소 : 서울특별시 금천구 가산디지털1로 205-27, 가산 A1타워 4층 426호</span>
+            <span className="hidden md:inline text-gray-600">|</span>
+            <span>전화 : 02-6218-0050</span>
+          </div>
+          <p className="pt-4 text-gray-500 text-xs">&copy; {new Date().getFullYear()} EZ CNSI. All rights reserved.</p>
+        </div>
       </footer>
     </section>
   );
