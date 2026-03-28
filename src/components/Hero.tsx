@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const slides = [
   { 
     title: "Your Business Partner EZ CNSI", 
-    subtitle: "Trusted digital partner for public information systems and enterprise innovation",
+    subtitle: "Trusted digital partner for public information systems",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop"
   },
   { 
@@ -95,6 +95,20 @@ export default function Hero() {
               </p>
             </motion.div>
           </AnimatePresence>
+
+          {/* Slide Indicators */}
+          <div className="flex gap-3 mt-12">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  current === index ? 'w-10 bg-electric-blue' : 'w-4 bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 

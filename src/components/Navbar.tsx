@@ -41,8 +41,8 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-navy-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <div className="text-2xl font-bold tracking-tighter cursor-pointer" onClick={() => scrollTo('hero')}>
-          EZ <span className="text-electric-blue">CNSI</span>
+        <div className="cursor-pointer flex items-center" onClick={() => scrollTo('hero')}>
+          <img src="/logo/ezcnsi_white_logo.png" alt="EZ CNSI" className="h-8 md:h-10 object-contain" />
         </div>
         
         {/* Desktop Menu */}

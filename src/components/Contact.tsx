@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone } from 'lucide-react';
 
@@ -9,13 +9,13 @@ declare global {
 }
 
 export default function Contact() {
+  const map1Rendered = useRef(false);
+  const map2Rendered = useRef(false);
+
   useEffect(() => {
-    let isMounted = true;
     let checkInterval: NodeJS.Timeout;
 
     const initMaps = () => {
-      if (!isMounted) return;
-      
       // Wait until Lander is fully loaded by the roughmapLoader
       if (window.daum && window.daum.roughmap && window.daum.roughmap.Lander) {
         clearInterval(checkInterval);
@@ -23,7 +23,7 @@ export default function Contact() {
         const container1 = document.getElementById('daumRoughmapContainer1774449235800');
         const container2 = document.getElementById('daumRoughmapContainer1774449294763');
         
-        if (container1 && container1.childNodes.length === 0) {
+        if (container1 && !map1Rendered.current) {
           const width1 = container1.parentElement?.clientWidth || 640;
           new window.daum.roughmap.Lander({
             "timestamp" : "1774449235800",
@@ -31,9 +31,10 @@ export default function Contact() {
             "mapWidth" : width1.toString(),
             "mapHeight" : "400"
           }).render();
+          map1Rendered.current = true;
         }
 
-        if (container2 && container2.childNodes.length === 0) {
+        if (container2 && !map2Rendered.current) {
           const width2 = container2.parentElement?.clientWidth || 640;
           new window.daum.roughmap.Lander({
             "timestamp" : "1774449294763",
@@ -41,23 +42,15 @@ export default function Contact() {
             "mapWidth" : width2.toString(),
             "mapHeight" : "400"
           }).render();
+          map2Rendered.current = true;
         }
       }
     };
-
-    if (!document.querySelector('.daum_roughmap_loader_script')) {
-      const script = document.createElement('script');
-      script.src = 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js';
-      script.charset = 'UTF-8';
-      script.className = 'daum_roughmap_loader_script';
-      document.body.appendChild(script);
-    }
 
     // Continuously check if the Lander constructor is ready
     checkInterval = setInterval(initMaps, 200);
 
     return () => {
-      isMounted = false;
       clearInterval(checkInterval);
     };
   }, []);
@@ -89,7 +82,9 @@ export default function Contact() {
               <div id="daumRoughmapContainer1774449235800" className="root_daum_roughmap root_daum_roughmap_landing w-full h-full"></div>
             </div>
             <div className="p-8 flex-grow">
-              <h3 className="text-2xl font-bold mb-6">(주)이지씨앤에스아이</h3>
+              <div className="mb-6 h-12 md:h-14">
+                <img src="/logo/ezcnsi_white_logo.png" alt="(주)이지씨앤에스아이" className="h-full object-contain object-left" />
+              </div>
               <div className="space-y-4 text-gray-300 text-sm">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-electric-blue shrink-0 mt-0.5" />
@@ -115,7 +110,9 @@ export default function Contact() {
               <div id="daumRoughmapContainer1774449294763" className="root_daum_roughmap root_daum_roughmap_landing w-full h-full"></div>
             </div>
             <div className="p-8 flex-grow">
-              <h3 className="text-2xl font-bold mb-6">(주)이지오름</h3>
+              <div className="mb-6 h-12 md:h-14">
+                <img src="/logo/ezoreum_white_logo.png" alt="(주)이지오름" className="h-full object-contain object-left" />
+              </div>
               <div className="space-y-4 text-gray-300 text-sm">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-electric-blue shrink-0 mt-0.5" />
