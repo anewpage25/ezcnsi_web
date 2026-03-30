@@ -65,11 +65,11 @@ export default function About() {
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2019</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">조달 입찰참가자격등록 / 중소기업확인 / 소프트웨어 사업자 신고</span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">조달 입찰참가자격등록 /<br/>중소기업확인 /<br/>소프트웨어 사업자 신고</span>
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2020</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">직접생산 확인 / 연구개발전담부서 등록</span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">직접생산 확인 /<br/>기술연구소 등록</span>
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2023</span>
@@ -97,19 +97,19 @@ export default function About() {
                   <ul className="space-y-6">
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2024.01</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">법인 설립 (㈜이지씨엔에스아이 출자 법인)</span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">법인 설립<br/>(㈜이지씨엔에스아이 출자 법인)</span>
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2025.12</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">인공지능 Live Call Center EZ call 개발완료</span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">인공지능 Live Call Center<br/>EZ Call 개발완료</span>
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2026.04</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">한국가스공사 EZ call 시험운영<br/><span className="text-sm text-gray-500 font-normal">(Voice bot, Chatbot 동시 운영)</span></span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">한국가스공사 EZ Call 시험운영<br/><span className="text-sm text-gray-500 font-normal">(Voice bot, Chatbot 동시 운영)</span></span>
                     </li>
                     <li className="flex flex-col sm:flex-row sm:gap-6">
                       <span className="text-royal-blue font-bold font-mono text-lg w-24 shrink-0">2026.04</span>
-                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">네이버 클라우드(클라우드 스퀘어)와 인공지능 SaaS 업무 협약</span>
+                      <span className="text-gray-700 font-medium mt-1 sm:mt-0 leading-relaxed">네이버 클라우드(클라우드 스퀘어)와<br/>인공지능 SaaS 업무 협약</span>
                     </li>
                   </ul>
                 </div>

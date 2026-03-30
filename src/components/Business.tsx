@@ -5,7 +5,7 @@ const businesses = [
     id: '01', 
     title: '공공 정보화 SI/SM', 
     desc: '공공부문에 특화된 정보시스템 구축 및 운영', 
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: [
       '공공 정보시스템 구축',
       '공공 정보시스템 유지관리 및 운영'
@@ -15,7 +15,7 @@ const businesses = [
     id: '02', 
     title: '인공지능 시스템', 
     desc: '인공지능 Live Call Center, Voice bot, Chat Bot', 
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop',
+    image: 'https://cdn.imweb.me/upload/S202412123c3b63e7f7510/1c13afb4799a0.png',
     details: [
       '인공지능 Live call center\n- 인공지능이 실제 상담원과 같이 전화를 받아 민원 대응',
       '인공지능 Voice bot',
