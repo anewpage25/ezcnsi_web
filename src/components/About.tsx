@@ -92,7 +92,7 @@ export default function About() {
                 
                 <div className="bg-white p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 group-hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] group-hover:border-royal-blue/20 transition-all duration-300">
                   <h4 className="text-2xl md:text-3xl font-bold text-navy-900 mb-3 group-hover:text-royal-blue transition-colors">(주)이지오름</h4>
-                  <p className="text-gray-500 font-medium text-sm md:text-base mb-8 pb-6 border-b border-gray-100">공공기관 정보시스템 구축 및 운영 / 인공지능 기반 시스템 / R&D</p>
+                  <p className="text-gray-500 font-medium text-sm md:text-base mb-8 pb-6 border-b border-gray-100">공공기관 정보시스템 구축 및 운영 /<br/>인공지능 기반 시스템 / R&D</p>
                   
                   <ul className="space-y-6">
                     <li className="flex flex-col sm:flex-row sm:gap-6">
